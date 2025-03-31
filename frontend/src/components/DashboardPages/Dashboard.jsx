@@ -129,7 +129,7 @@ const Dashboard = () => {
 			{/* Stat Cards */}
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
 				{/* Card 1 */}
-				<div className="bg-gray-100 p-6 rounded-xl">
+				<div className="bg-slate-200/60 p-6 rounded-xl hover:bg-blue-200/60 transition duration-200">
 					<div className="flex flex-col h-full">
 						<div className="mb-4">
 							<div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
@@ -154,16 +154,16 @@ const Dashboard = () => {
 						<div className="text-sm text-gray-600 mb-1">My Deal</div>
 						<div className="text-2xl font-bold mb-4">Add Batch</div>
 						<div className="mt-auto">
-							<p className="text-xs text-red-500">
+							<p className="text-xs text-red-500 flex gap-1">
 								<span className="mr-1">↗</span>
-								Your short message goes here
+								<h1 className="text-gray-900">Your short message goes here</h1>
 							</p>
 						</div>
 					</div>
 				</div>
 
 				{/* Card 2 */}
-				<div className="bg-gray-100 p-6 rounded-xl">
+				<div className="bg-slate-200/60 p-6 rounded-xl hover:bg-blue-200/60 transition duration-200">
 					<div className="flex flex-col h-full">
 						<div className="mb-4">
 							<div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
@@ -188,16 +188,16 @@ const Dashboard = () => {
 						<div className="text-sm text-gray-600 mb-1">My Batches</div>
 						<div className="text-2xl font-bold mb-4">06</div>
 						<div className="mt-auto">
-							<p className="text-xs text-red-500">
+							<p className="text-xs text-red-500 flex gap-1">
 								<span className="mr-1">↗</span>
-								Your short message goes here
+								<h1 className="text-gray-900">Your short message goes here</h1>
 							</p>
 						</div>
 					</div>
 				</div>
 
 				{/* Card 3 */}
-				<div className="bg-gray-100 p-6 rounded-xl">
+				<div className="bg-slate-200/60 p-6 rounded-xl hover:bg-blue-200/60 transition duration-200">
 					<div className="flex flex-col h-full">
 						<div className="mb-4">
 							<div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
@@ -224,9 +224,9 @@ const Dashboard = () => {
 						</div>
 						<div className="text-2xl font-bold mb-4">18</div>
 						<div className="mt-auto">
-							<p className="text-xs text-red-500">
+							<p className="text-xs text-red-500 flex gap-1">
 								<span className="mr-1">↗</span>
-								Your short message goes here
+								<h1 className="text-gray-900">Your short message goes here</h1>
 							</p>
 						</div>
 					</div>
@@ -236,7 +236,7 @@ const Dashboard = () => {
 			{/* Billing History */}
 			<div>
 				<div className="flex justify-between items-center mb-4">
-					<h2 className="text-xl font-bold text-gray-800">Billing history</h2>
+					<h2 className="text-xl font-bold text-gray-800">Batch history</h2>
 					<div className="flex gap-3">
 						<button
 							type="button"
