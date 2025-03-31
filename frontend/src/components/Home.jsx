@@ -16,7 +16,7 @@ const Home = () => {
 			</div>
 
 			{/* Right bar taking full remaining space */}
-			<div className="flex-1 w-screen bg-gray-100 p-5 overflow-y-auto">
+			<div className="flex-1 w-screen bg-gray-100  overflow-y-auto">
 				{page === "dashboard" && <Dashboard />}
 				{page === "profile" && <Profile />}
 				{page === "settings" && <Settings />}

@@ -140,11 +140,11 @@ const Dashboard = () => {
 				<div className="bg-slate-200/60 p-6 rounded-xl hover:bg-blue-200/60 transition duration-200">
 					<div className="flex flex-col h-full">
 						<div className="mb-4">
-							<div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+							<div className="bg-[#ddf5f2] w-10 h-10 rounded-full flex items-center justify-center">
                                 <button onClick={handleAddBatch} className="">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									className="h-5 w-5 text-blue-600"
+									className="h-5 w-5 text-[#2ec4b6]"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke="currentColor"
@@ -176,10 +176,10 @@ const Dashboard = () => {
 				<div className="bg-slate-200/60 p-6 rounded-xl hover:bg-blue-200/60 transition duration-200">
 					<div className="flex flex-col h-full">
 						<div className="mb-4">
-							<div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+							<div className="bg-[#ddf5f2] w-10 h-10 rounded-full flex items-center justify-center">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									className="h-5 w-5 text-blue-600"
+									className="h-5 w-5 text-[#2ec4b6]"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke="currentColor"
@@ -210,10 +210,10 @@ const Dashboard = () => {
 				<div className="bg-slate-200/60 p-6 rounded-xl hover:bg-blue-200/60 transition duration-200">
 					<div className="flex flex-col h-full">
 						<div className="mb-4">
-							<div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+							<div className="bg-[#ddf5f2] w-10 h-10 rounded-full flex items-center justify-center">
 								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									className="h-5 w-5 text-blue-600"
+									xmlns="http://www.w3.org/2000/svg" 
+									className="h-5 w-5 text-[#2ec4b6]"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke="currentColor"
