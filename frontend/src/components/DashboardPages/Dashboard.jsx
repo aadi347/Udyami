@@ -1,8 +1,10 @@
 // src/pages/Dashboard.jsx
 import React, { useState } from "react";
+import BatchForm from "../BatchForm";
 
 const Dashboard = () => {
 	const [selectedInvoices, setSelectedInvoices] = useState([]);
+    const [showBatchForm, setShowBatchForm] = useState(false);
 
 	const invoices = [
 		{
@@ -66,6 +68,8 @@ const Dashboard = () => {
 		}
 	};
 
+
+
 	const toggleAllInvoices = () => {
 		if (selectedInvoices.length === invoices.length) {
 			setSelectedInvoices([]);
@@ -73,6 +77,10 @@ const Dashboard = () => {
 			setSelectedInvoices(invoices.map((invoice) => invoice.id));
 		}
 	};
+
+    const handleAddBatch = () => {
+        setShowBatchForm(true);
+    }
 
 	return (
 		<div className="mx-auto p-6 font-sans ">
@@ -133,6 +141,7 @@ const Dashboard = () => {
 					<div className="flex flex-col h-full">
 						<div className="mb-4">
 							<div className="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+                                <button onClick={handleAddBatch} className="">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									className="h-5 w-5 text-blue-600"
@@ -149,6 +158,7 @@ const Dashboard = () => {
 										d="M12 6v6m0 0v6m0-6h6m-6 0H6"
 									/>
 								</svg>
+                                </button>
 							</div>
 						</div>
 						<div className="text-sm text-gray-600 mb-1">My Deal</div>
@@ -288,7 +298,7 @@ const Dashboard = () => {
 				{/* Table */}
 				<div className="border border-gray-200 rounded-lg overflow-hidden">
 					{/* Table Header */}
-					<div className="grid grid-cols-12 bg-gray-50 py-3 px-4 border-b">
+					<div className="grid grid-cols-12 bg-gray-50 bg py-3 px-4 border-b border-gray-200">
 						<div className="col-span-1">
 							<input
 								type="checkbox"
@@ -325,7 +335,7 @@ const Dashboard = () => {
 					{invoices.map((invoice) => (
 						<div
 							key={invoice.id}
-							className="grid grid-cols-12 py-4 px-4 border-b hover:bg-gray-50"
+							className="grid grid-cols-12 py-4 px-4 border-b border-gray-200 hover:bg-gray-50"
 						>
 							<div className="col-span-1">
 								<input
@@ -335,11 +345,11 @@ const Dashboard = () => {
 									onChange={() => toggleInvoice(invoice.id)}
 								/>
 							</div>
-							<div className="col-span-4 text-gray-800">{invoice.name}</div>
-							<div className="col-span-3 text-gray-800">{invoice.amount}</div>
-							<div className="col-span-2 text-gray-800">{invoice.date}</div>
+							<div className="col-span-4 text-sm text-gray-800">{invoice.name}</div>
+							<div className="col-span-3 text-sm text-gray-800">{invoice.amount}</div>
+							<div className="col-span-2 text-sm text-gray-800">{invoice.date}</div>
 							<div className="col-span-1 text-gray-800">
-								<span className="inline-flex items-center gap-1 text-purple-700">
+								<span className="inline-flex items-center gap-1  text-purple-700">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										className="h-4 w-4"
@@ -386,6 +396,12 @@ const Dashboard = () => {
 					))}
 				</div>
 			</div>
+            {/* Batch Form */}
+            {showBatchForm && (
+                <div className="fixed inset-0 flex items-center justify-center  bg-opacity-50 backdrop-blur-md z-50">
+                    <BatchForm />
+                </div>
+            )}
 		</div>
 	);
 };

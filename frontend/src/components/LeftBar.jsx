@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { CgProfile } from "react-icons/cg";
 import { IoSettings, IoLogOut } from "react-icons/io5";
+import { RiLoginCircleLine } from "react-icons/ri";
+
 
 const LeftBar = ({ setPage }) => {
   const [activePage, setActivePage] = useState("dashboard"); // Track active page
@@ -36,8 +38,8 @@ const LeftBar = ({ setPage }) => {
           activePage === "profile" ? "bg-[#2ec4b6] shadow-[0_4px_10px_#2ec4b6]" : "bg-transparent text-gray-700"
         } hover:bg-gray-200`}
       >
-        <CgProfile size={20} />
-        <span>Profile</span>
+        <RiLoginCircleLine size={20} />
+        <span>Login</span>
       </button>
 
       {/* Settings Button */}
