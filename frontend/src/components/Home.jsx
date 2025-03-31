@@ -14,7 +14,7 @@ const Home = () => {
       <LeftBar setPage={setPage} />
 
       {/* Right bar taking full remaining space */}
-      <div className="flex-1 bg-gray-100 p-5">
+      <div className="flex-1 bg-gray-100">
         {page === "dashboard" && <Dashboard />}
         {page === "profile" && <Profile />}
         {page === "settings" && <Settings />}
